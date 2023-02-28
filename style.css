@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header,
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.gridContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#grid {
+  display: flex;
+  border: none;
+  border: 1px solid grey;
+  max-width: 450px;
+  max-height: 450px;
+  flex-wrap: wrap;
+}
+.canvasGrid {
+  display: flex;
+  height: 28px;
+  width: 28px;
+}
+.canvasGrid:hover {
+  background: rgb(208, 206, 206);
+  cursor: pointer;
+}

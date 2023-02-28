@@ -14,6 +14,6 @@ have some hints of the old school windows paint program.
 ---
 
 - **Built With**
-  -Semantic HTML5 markup
-  -CSS
-  -Javascript
+  - Semantic HTML5 markup
+  - CSS
+  - Javascript
