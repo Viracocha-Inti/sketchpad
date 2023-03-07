@@ -1,3 +1,5 @@
+let color = "black";
+
 function createCanvas(size) {
   let canvas = document.querySelector(".grid");
   let squares = canvas.querySelectorAll("div");
@@ -8,9 +10,7 @@ function createCanvas(size) {
   let amount = size * size;
   for (let i = 0; i < amount; i++) {
     let square = document.createElement("div");
-    square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "black";
-    });
+    square.addEventListener("mouseover", colorSquares);
     square.classList.add("canvasGrid");
     square.style.backgroundColor = "white";
     canvas.insertAdjacentElement("beforeend", square);
@@ -24,6 +24,14 @@ function changeCanvasSize(input) {
   } else {
     console.log("Too many squares");
   }
+}
+
+function colorSquares() {
+  this.style.backgroundColor = color;
+}
+
+function changeColor(choice) {
+  color = choice;
 }
 
 createCanvas(16);
