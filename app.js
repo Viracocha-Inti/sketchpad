@@ -27,11 +27,21 @@ function changeCanvasSize(input) {
 }
 
 function colorSquares() {
-  this.style.backgroundColor = color;
+  if (color === "random") {
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  } else {
+    this.style.backgroundColor = color;
+  }
 }
 
 function changeColor(choice) {
   color = choice;
+}
+
+function clearCanvas() {
+  let canvas = document.querySelector(".grid");
+  let squares = canvas.querySelectorAll("div");
+  squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
 
 createCanvas(16);
