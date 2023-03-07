@@ -1,4 +1,5 @@
 let color = "black";
+let click = true;
 
 function createCanvas(size) {
   let canvas = document.querySelector(".grid");
@@ -27,10 +28,12 @@ function changeCanvasSize(input) {
 }
 
 function colorSquares() {
-  if (color === "random") {
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-  } else {
-    this.style.backgroundColor = color;
+  if (click) {
+    if (color === "random") {
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+      this.style.backgroundColor = color;
+    }
   }
 }
 
@@ -43,6 +46,10 @@ function clearCanvas() {
   let squares = canvas.querySelectorAll("div");
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
+
+document.querySelector("body").addEventListener("click", () => {
+  click = !click;
+});
 
 createCanvas(16);
 
