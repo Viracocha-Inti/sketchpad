@@ -8,32 +8,38 @@
     <title>Sketchpad</title>
   </head>
   <body>
-    <div class="header">
-      <h1>Sketchpad</h1>
-    </div>
-    <div class="canvasContainer">
-      <div class="grid"></div>
-    </div>
-    <div class="buttons">
-      <button class="black" onclick="changeColor('black')">Black</button>
-      <button class="rainbow" onclick="changeColor('random')">Rainbow</button>
-      <button class="eraser" onclick="changeColor('white')">Eraser</button>
-      <button class="clear" onclick="clearCanvas()">Clear Canvas</button>
-    </div>
-    <div class="input">
-      <input
-        type="text"
-        placeholder="Size of Canvas"
-        value="16"
-        onchange="changeCanvasSize(this.value)"
-      />
-      <button>Set Size</button>
-    </div>
-    <div class="footer">
-      <p>
-        Copyright
-        <a href="https://github.com/Viracocha-Inti">@Viracocha-Inti 2023</a>
-      </p>
+    <div class="programContainer">
+      <div class="header">
+        <h1>Sketchpad</h1>
+      </div>
+      <div class="gridNButtons">
+        <div class="buttons">
+          <button class="option" onclick="changeColor('black')">Black</button>
+          <button class="option" onclick="changeColor('random')">
+            Rainbow
+          </button>
+        </div>
+        <div class="grid"></div>
+        <div class="buttons">
+          <button class="option" onclick="changeColor('white')">Eraser</button>
+          <button class="option" onclick="clearCanvas()">Clear Canvas</button>
+        </div>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          placeholder="Size of Canvas"
+          value="16"
+          onchange="changeCanvasSize(this.value)"
+        />
+        <button>Set Size</button>
+      </div>
+      <div class="footer">
+        <p>
+          Copyright
+          <a href="https://github.com/Viracocha-Inti">@Viracocha-Inti 2023</a>
+        </p>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>

@@ -3,19 +3,48 @@
   margin: 0;
   box-sizing: border-box;
 }
+.programContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(rgb(255, 255, 255), red);
+}
 .header,
-.canvasContainer,
 .input,
-.footer,
-.buttons {
+.footer {
   padding: 20px;
 }
+.gridNButtons {
+  display: flex;
+  gap: 50px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.option {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: rgb(211, 44, 44);
+  font-size: 25px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+.option:hover {
+  background-color: rgb(211, 44, 44);
+  color: white;
+}
 .grid {
-  border: 1px solid grey;
+  border: 1px solid black;
   display: grid;
   width: 502px;
   height: 502px;
-  box-shadow: 4px 3px rgb(189, 189, 189);
+  box-shadow: 4px 3px black;
 }
 .canvasGrid {
   border: none;
