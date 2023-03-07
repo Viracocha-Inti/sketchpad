@@ -11,8 +11,23 @@
     <div class="header">
       <h1>Sketchpad</h1>
     </div>
-    <div class="gridContainer">
-      <div id="grid" class="grid"></div>
+    <div class="canvasContainer">
+      <div class="grid"></div>
+    </div>
+    <div class="buttons">
+      <button class="black">Black</button>
+      <button class="rainbow">Rainbow</button>
+      <button class="eraser">Eraser</button>
+      <button class="clear">Clear Canvas</button>
+    </div>
+    <div class="input">
+      <input
+        type="text"
+        placeholder="Size of Canvas"
+        value="16"
+        onchange="changeCanvasSize(this.value)"
+      />
+      <button>Set Size</button>
     </div>
     <div class="footer">
       <p>

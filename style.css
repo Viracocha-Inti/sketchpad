@@ -4,30 +4,19 @@
   box-sizing: border-box;
 }
 .header,
-.footer {
-  display: flex;
-  justify-content: center;
+.canvasContainer,
+.input,
+.footer,
+.buttons {
   padding: 20px;
 }
-.gridContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#grid {
-  display: flex;
-  border: none;
+.grid {
   border: 1px solid grey;
-  max-width: 450px;
-  max-height: 450px;
-  flex-wrap: wrap;
+  display: grid;
+  width: 502px;
+  height: 502px;
+  box-shadow: 4px 3px rgb(189, 189, 189);
 }
 .canvasGrid {
-  display: flex;
-  height: 28px;
-  width: 28px;
-}
-.canvasGrid:hover {
-  background: rgb(208, 206, 206);
-  cursor: pointer;
+  border: none;
 }
