@@ -20,16 +20,21 @@ function createCanvas(size) {
 function changeCanvasSize(input) {
   if (input >= 2 && input <= 100) {
     createCanvas(input);
+    document.querySelector(
+      ".error"
+    ).textContent = `Canvas size set to ${input} X ${input}`;
   } else if (input < 2) {
-    console.log("Not enough squares");
+    document.querySelector(".error").textContent =
+      "Input below 2. Must be a number higher than 2";
   } else {
-    console.log("Too many squares");
+    document.querySelector(".error").textContent =
+      "Input greater than 100. Must be a number lower than 100";
   }
 }
 
 function colorSquares() {
   if (click) {
-    if (color === "random") {
+    if (color === "rainbow") {
       this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else {
       this.style.backgroundColor = color;
@@ -39,6 +44,9 @@ function colorSquares() {
 
 function changeColor(choice) {
   color = choice;
+  document.querySelector(
+    ".currentColor"
+  ).textContent = `Current color of stylus = ${color}`;
 }
 
 function clearCanvas() {
@@ -47,8 +55,15 @@ function clearCanvas() {
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
 
-document.querySelector("body").addEventListener("click", () => {
-  click = !click;
+document.querySelector("body").addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") {
+    click = !click;
+    if (click) {
+      document.querySelector(".mode").textContent = "Coloring Cursor: Active";
+    } else {
+      document.querySelector(".mode").textContent = "Coloring Cursor: Inactive";
+    }
+  }
 });
 
 createCanvas(16);

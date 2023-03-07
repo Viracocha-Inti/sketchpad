@@ -15,6 +15,27 @@
 .footer {
   padding: 20px;
 }
+.headerTitle {
+  background-color: white;
+  color: rgb(211, 44, 44);
+  font-size: 30px;
+  padding: 10px 60px;
+  border-radius: 15px;
+}
+.mode,
+.error,
+.currentColor {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(211, 44, 44);
+}
+.mode,
+.currentColor {
+  padding-bottom: 5px;
+}
+.error {
+  padding-top: 15px;
+}
 .gridNButtons {
   display: flex;
   gap: 50px;
@@ -30,12 +51,13 @@
   background-color: white;
   color: rgb(211, 44, 44);
   font-size: 25px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   transition: all 0.5s ease;
 }
-.option:hover {
+.option:hover,
+.inputButton:hover {
   background-color: rgb(211, 44, 44);
   color: white;
 }
@@ -48,4 +70,24 @@
 }
 .canvasGrid {
   border: none;
+}
+.inputText,
+.inputButton {
+  border: none;
+  font-size: 22px;
+  padding: 10px;
+  background-color: white;
+  color: rgb(211, 44, 44);
+}
+.inputButton {
+  cursor: pointer;
+  border-radius: 15px;
+}
+.footer {
+  color: white;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
 }

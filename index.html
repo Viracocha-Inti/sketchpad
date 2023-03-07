@@ -10,12 +10,16 @@
   <body>
     <div class="programContainer">
       <div class="header">
-        <h1>Sketchpad</h1>
+        <div class="headerTitle">
+          <h1>Sketchpad</h1>
+        </div>
       </div>
+      <div class="mode">Coloring Cursor: Active</div>
+      <div class="currentColor">Current color of stylus =</div>
       <div class="gridNButtons">
         <div class="buttons">
           <button class="option" onclick="changeColor('black')">Black</button>
-          <button class="option" onclick="changeColor('random')">
+          <button class="option" onclick="changeColor('rainbow')">
             Rainbow
           </button>
         </div>
@@ -25,14 +29,16 @@
           <button class="option" onclick="clearCanvas()">Clear Canvas</button>
         </div>
       </div>
+      <div class="error">Input size must be between 2 and 100</div>
       <div class="input">
         <input
+          class="inputText"
           type="text"
           placeholder="Size of Canvas"
           value="16"
           onchange="changeCanvasSize(this.value)"
         />
-        <button>Set Size</button>
+        <button class="inputButton">Set Size</button>
       </div>
       <div class="footer">
         <p>
