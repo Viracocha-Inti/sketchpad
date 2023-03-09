@@ -1,4 +1,4 @@
-let color = "black";
+let color = "grey";
 let click = true;
 
 function createCanvas(size) {
