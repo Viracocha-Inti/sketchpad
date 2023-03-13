@@ -29,7 +29,7 @@
 .currentColor {
   font-size: 25px;
   font-weight: bold;
-  color: rgb(211, 44, 44);
+  color: white;
 }
 .mode,
 .currentColor {
@@ -109,23 +109,28 @@ a {
   .gridNButtons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
   .buttons {
     flex-direction: row;
+    gap: 10px;
   }
   .option {
     font-size: 25px;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 }
 
 /* iPhone Pro Screen */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
   .option {
     font-size: 20px;
     width: 90px;
     height: 90px;
+  }
+  .buttons {
+    gap: 10px;
   }
 }
