@@ -69,8 +69,15 @@
   border: 1px solid black;
   box-shadow: 4px 3px black;
   display: grid;
-  width: 502px;
-  height: 502px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 60vw;
+  height: 60vw;
+  max-width: 750px;
+  max-height: 750px;
+}
+.grid:hover {
+  cursor: alias;
 }
 .canvasGrid {
   border: none;
@@ -95,4 +102,30 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: inherit;
+}
+
+/* iPad Screen */
+@media screen and (max-width: 820px) {
+  .gridNButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+  .option {
+    font-size: 25px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* iPhone Pro Screen */
+@media screen and (max-width: 390px) {
+  .option {
+    font-size: 20px;
+    width: 90px;
+    height: 90px;
+  }
 }
